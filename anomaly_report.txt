@@ -1,0 +1,15 @@
+SECURITY LOG ANOMALY REPORT
+============================================================
+
+BRUTE-FORCE PATTERNS:
+  ip_address        window_start  failed_attempts_in_window                                                             reason
+203.0.113.77 2026-06-23 03:14:00                         25 Brute-force pattern: repeated failed logins in a short time window
+
+OFF-HOURS LOGINS:
+          timestamp      user   ip_address                                                       reason
+2026-06-23 03:17:25     admin 203.0.113.77 Successful login outside normal business hours (07:00-21:00)
+2026-06-24 02:47:00 j.mueller 192.168.1.14 Successful login outside normal business hours (07:00-21:00)
+
+ACCOUNT SCANNING:
+  ip_address        window_start  distinct_users_targeted                                                              users                                                             reason
+203.0.113.77 2026-06-25 14:00:00                        8 a.schmidt, admin, guest, j.mueller, nikhel, root, svc_backup, test Account scanning pattern: many distinct usernames targeted quickly
